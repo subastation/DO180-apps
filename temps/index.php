@@ -1,6 +1,6 @@
 <html>
 <head>
-      <title>Converting Temperatures</title>
+      <title>Convertitore di temperature</title>
       <meta charset="utf-8">
 </head>
 <body>
@@ -8,14 +8,14 @@
 
 <table>
 <tr>
-    <td>Enter the temperature to convert:</td>
+    <td>Inserisci la temperatura da convertire:</td>
     <td><input type="text" name="temp" id="temp" size="10"></td>
 </tr>
 
 <tr>
     <td>Convert to:</td>
     <td><select name="scale" id="scale" size="1">
-               <option disabled>Select the scale</option>
+               <option disabled>Seleziona l'unità di misura originale:</option>
                <option value="c">Celsius</option>
                <option value="f">Fahrenheit</option>
         </select>
@@ -23,7 +23,7 @@
 </tr>
 
 <tr>
-    <td><input type="submit" name="btnConvert" id="btnConvert" value="Convert"></td>
+    <td><input type="submit" name="btnConvert" id="btnConvert" value="Converti"></td>
     <td><input type="reset" name="btnReset" id="btnReset" value="Reset"></td>
 </tr>
 
@@ -45,7 +45,7 @@ if (isset($_POST['btnConvert'])) {
 $temp = $_POST['temp'];
 $scale = $_POST['scale'];
 $converted = convert($temp, $scale);
-echo "The original temperature, $temp, converted is $converted.";
+echo "La temperatura originale, $temp, $scale è convertita in $converted.";
 }
 ?>
 
